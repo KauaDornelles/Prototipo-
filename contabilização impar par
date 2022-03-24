@@ -1,0 +1,18 @@
+lista = []
+listapar = []
+listaimpar = []
+while True:
+    n = int(input("digite um numero:"))
+    lista.append(n)
+    if n%2 == 0:
+        listapar.append(n)
+    elif n%2 == 1:
+        listaimpar.append(n)
+    validar = ' '
+    while validar not in "SsNn":
+        validar = str(input("Quer colocar mais um numero?")).strip().upper()[0]
+    if validar == 'N':
+        break
+print(f"Os numeros que voce digitou em ordem crescente foram {sorted(lista)}")
+print(f"Os numeros pares que voce digitou foram {listapar}")
+print(f"Os numeros impares que voce digitou foram {listaimpar}")
